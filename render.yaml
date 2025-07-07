@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: travel-planner-chatbot
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn travelmate:app"
+    plan: free
+    region: singapore
