@@ -1,9 +1,11 @@
 services:
   - type: web
     name: travel-planner-chatbot
-    runtime: python
+    env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn travelmate:app
-    envVars:
-      - key: PORT
-        value: 10000
+    startCommand: gunicorn trip_planner_chatbot:app
+
+    runtime: python
+    pythonVersion: 3.10.13
+    region: oregon
+    plan: free
