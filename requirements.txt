@@ -2,5 +2,4 @@ Flask
 gunicorn
 numpy
 scikit-learn
-tensorflow
-nltk
+tensorflow==2.13.0
