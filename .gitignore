@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.pickle
+*.keras
+*.h5
+*.env
+.vscode/

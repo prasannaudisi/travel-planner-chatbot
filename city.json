@@ -1,0 +1,1341 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": [
+          "Hi",
+          "Hello",
+          "Hey",
+          "What's up?",
+          "How are you?"
+        ],
+        "responses": [
+          "Hello! How can I assist you today?",
+          "Hi! What can I do for you?",
+          "Greetings! How may I help you?"
+        ]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": [
+          "Goodbye",
+          "See you later",
+          "Farewell"
+        ],
+        "responses": [
+          "Goodbye! Have a great day!",
+          "See you later! Feel free to ask if you need anything!"
+        ]
+      },
+      {
+        "tag": "budget",
+        "patterns": [
+            "What is the travel cost from {current_location} to {destination} by {mode}?",
+            "Give me budget from {current_location} to {destination} using {mode}",
+            "How much will it cost to travel from {current_location} to {destination} by {mode}?"
+        ],
+        "responses": [
+            "Let me calculate the budget for you..."
+        ]
+      },
+    
+      {
+        "tag": "city_info",
+        "patterns": [
+          "Where can I stay in {city}?",
+          "What to do in {city}?",
+          "Find me accommodations in {city}",
+          "Show me places to eat in {city}",
+          "What can I visit in {city}?",
+          "Tell me about places in {city}",
+          "What to do in {city}?",
+          "Where can I stay in {city}?",
+          "Find me accommodations in {city}",
+          "Show me dining options in {city}"
+      ],
+      "responses": [
+          "Here are some options for {city}: {data}",
+          "You might want to check out these places in {city}: {data}"
+        ],
+        "data": {
+          "hyderabad": {
+            "places_to_visit": [
+              {
+                "name": "Charminar",
+                "description": "An iconic monument and mosque with stunning Islamic architecture, the Charminar is a must-visit. Located in the heart of the old city, it’s surrounded by bustling markets where you can buy pearls, bangles, and local handicrafts.",
+                "image": "/static/images/charminar.jpg",
+                "budget": "$25"
+              },
+              {
+                "name": "Golconda Fort",
+                "description": "This ancient fort with an impressive acoustics system and panoramic views of Hyderabad is rich in history. A light and sound show in the evening narrates the fort’s history, adding to the experience.",
+                "image": "/static/images/golconda.jpg",
+                "budget": "$50"
+              },
+              {
+                "name": "Ramoji Film City",
+                "description": "Known as one of the largest film cities in the world, Ramoji Film City offers guided tours with attractions, sets, gardens, and rides. It's perfect for families and those interested in movie-making.",
+                "image": "/static/images/ramoji.jpg",
+                "budget": "$1350"
+              },
+              {
+                "name": "Hussain Sagar Lake",
+                "description": "A beautiful lake with a massive Buddha statue at its center, Hussain Sagar offers boating experiences and scenic views, especially at sunset. The surrounding Necklace Road has great dining options and spots to relax.",
+                "image": "/static/images/hussain_sagar.jpg",
+                "budget": "$0"
+              },
+              {
+                "name": "Salar Jung Museum",
+                "description": "One of the largest museums in India, the Salar Jung Museum houses an extensive collection of artifacts from around the world, including sculptures, paintings, and rare manuscripts. It's a treasure trove for history and art lovers.",
+                "image": "/static/images/salar.jpg",
+                "budget": "$150-500"
+              }
+
+            ],
+            "accommodations": [
+              {
+                "name": "Taj Falaknuma Palace",
+                "description": "This luxurious palace hotel offers a historic and royal experience with opulent interiors.",
+                "image": "/static/images/Taj.jpg",
+                "price_range": "$42000-63500"
+              },
+              {
+                "name": "Park Hyatt Hyderabad",
+                "description": "Known for its modern architecture and excellent service.",
+                "image": "/static/images/park.jpg",
+                "price_range": "$16000-30000"
+              },
+              {
+                "name": "ITC Kohenur",
+                "description": "A luxury hotel with contemporary design and high-end amenities.",
+                "image": "/static/images/ITc.jpg",
+                "price_range": "$27000-34000"
+              },
+              {
+                "name": "Greaves Trident Hyderabad",
+                "description": "Located in HITEC City, perfect for business and leisure travelers.",
+                "image": "/static/images/Greaves.jpg",
+                "price_range": "$20000 - $30000"
+              },
+              {
+                "name": "The Westin Hyderabad Mindspace",
+                "description": "Ideal for relaxation, featuring a spa and upscale dining options",
+                "image": "/static/images/westin.jpg",
+                "price_range": "$41000-96000"
+              }
+            ],
+            "dining_options": [
+              {
+                "name": "Hyderabadi Biryani",
+                "description": "A must-try, iconic dish of spiced rice and marinated meat.",
+                "image": "/static/images/biriyani.jpg",
+                "price_range": "$15500-25000"
+              },
+              {
+                "name": "Haleem",
+                "description": "A rich, slow-cooked stew, especially popular during Ramadan.",
+                "image": "/static/images/images.jpg",
+                "price_range": "$7500-25000"              
+              },
+              {
+                "name": "Mirchi ka Salan",
+                "description": "A spicy and tangy green chili curry often served with biryani.",
+                "image": "/static/images/mirchi.jpg",
+                "price_range": "$2500-4000"
+              },
+              {
+                "name": "Nihari",
+                "description": "A flavorful meat stew typically eaten as a breakfast delicacy.",
+                "image": "/static/images/nihari.jpg",
+                "price_range": "$2000-3000"
+              },
+              {
+                "name": "Qubani ka Meetha",
+                "description": "A traditional dessert made from dried apricots, often served with cream or ice cream.",
+                "image": "/static/images/khubani.jpg",
+                "price_range": "$1500-3000"
+              }
+            ]
+          },
+          "chennai": {
+            "places_to_visit": [
+              {
+                "name": "Marina Beach",
+                "description": "The world's second-longest urban beach offers a vibrant atmosphere with street vendors, horse rides, and scenic sunsets",
+                "image": "/static/images/merina.jpg",
+                "budget": "$0"
+              },
+              {
+                "name": "Fort St. George",
+                "description": "This historical British fortress includes a museum showcasing artifacts from the colonial period",
+                "image": "/static/images/fot.jpg",
+                "budget": "$250"
+              },
+              {
+                "name": "Kapaleeshwarar Temple ",
+                "description": "A Dravidian-style temple dedicated to Lord Shiva, renowned for its colorful gopurams and intricate sculptures​",
+                "image": "/static/images/kapil.jpg",
+                "budget": "$0"
+              },
+              {
+                "name": "Government Museum and National Art Gallery",
+                "description": "One of India's oldest museums, it houses South Indian bronze statues, ancient artifacts, and classic art pieces​",
+                "image": "/static/images/museum.jpg",
+                "budget": "$30"
+              },
+              {
+                "name": "St. Thomas Mount",
+                "description": "A scenic hilltop shrine with panoramic views of the city and believed to be the place of martyrdom of St. Thomas the Apostle​",
+                "image": "/static/images/st.jpg",
+                "budget": "$25"
+              }
+            ],
+            "accommodations": [
+              {
+                "name":"ITC Grand Chola",
+                "description": "Known for its luxurious rooms and classic South Indian architecture.",
+                "image": "/static/images/itcchennai.jpg",
+                "price_range": "$43000-50000"
+              },
+              {
+                "name":"Taj Coromandel",
+                "description": " Offers exceptional hospitality and modern amenities with a touch of traditional Tamil decor.",
+                "image": "/static/images/tajchennai.jpg",
+                "price_range": "$1500-30000"
+              },
+              {
+                "name":"The Leela Palace",
+                "description": "Located by the sea, this hotel provides luxury and an excellent view of the Bay of Bengal.",
+                "image": "/static/images/leela.jpg",
+                "price_range": "$2000-5000"
+              },
+              {
+                "name":"Hyatt Regenc",
+                "description": "Known for its spacious rooms, spa, and contemporary design.",
+                "image": "/static/images/hya.jpg",
+                "price_range": "14000-17000"
+              },
+              {
+                "name":"Park Hyat",
+                "description": " A blend of elegance and comfort, with fine dining and an upscale experience.",
+                "image": "/static/images/park.jpg",
+                "price_range": "16000-18000"
+              }
+            ],
+            "dining_options": [
+              {
+                "name": "Hyderabadi Haleem ",
+                "description": "Specializes in South Indian cuisine with a rich, traditional ambiance.",
+                "image": "/static/images/halim.jpg",
+                "price_range": "$1000 - $2000"
+              },
+              {
+                "name": " South Indian Thali",
+                "description": " Offers North-West Frontier cuisine, with a focus on tandoori specialties.",
+                "image": "/static/images/tali.jpg",
+                "price_range": "$800 - $1000"
+              },
+              {
+                "name": "Seafood Platte",
+                "description": "Known for upscale South Indian dishes and a luxurious setting.",
+                "image": "/static/images/sea.jpg",
+                "price_range": "$800 - $1000"
+              },
+              {
+                "name": "Mutton Kola Urunda",
+                "description": "A popular spot for authentic South Indian breakfasts, particularly famous for its idlis and dosas.",
+                "image": "/static/images/kola.jpg",
+                "price_range": "$50 - $170"
+              },
+              {
+                "name": "*Kari Dosai",
+                "description": "Known for its buffet with an extensive selection of South Indian and international dishes.",
+                "image": "/static/images/dosa.jpg",
+                "price_range": "$120 - $200"
+              }
+            ]
+          },
+          "araku": {
+            "places_to_visit": [
+              {
+                "name": "Borra Caves",
+                "description": " These are stunning limestone caves, naturally formed over millions of years. The caves are illuminated with colorful lights, highlighting the intricate stalactite and stalagmite formations",
+                "image": "/static/images/Borra ap4.webp",
+                "budget": "$80"
+              },
+              {
+                "name": "Araku Valley",
+                "description": " The valley is a picturesque destination surrounded by the Eastern Ghats, featuring breathtaking views, coffee plantations, and tribal villages",
+                "image": "/static/images/valley ap5.jpg",
+                "budget": "$0"
+              },
+              {
+                "name": "Katiki Waterfalls",
+                "description": "A trek through lush green forests will lead you to this majestic waterfall. The falls are around 50 feet high, and the surrounding area is a great spot for trekking and picnics.",
+                "image": "/static/images/Katiki ap3.jpg",
+                "budget": "$250-300"
+              },
+              {
+                "name": "Tribal Museum",
+                "description": " This museum offers an insight into the local tribal culture, showcasing artifacts, handicrafts, and traditional dwellings. It’s an educational and cultural experience.",
+                "image": "/static/images/ap2.jpg",
+                "budget": "$40-80"
+              },
+              {
+                "name": "Padmapuram Gardens",
+                "description": " These botanical gardens are known for their beautiful flowerbeds and tree-top huts that offer a unique stay experience. ",
+                "image": "/static/images/ap1.jpg",
+                "budget": "$50-60"
+              }
+            ],
+            "accommodations": [
+              {
+                "name":"Haritha Valley Resort",
+                "description": "this resort is popular for its scenic views and amenities like in-house dining, spacious rooms, and a relaxing atmosphere.",
+                "image": "/static/images/haritha aa1.jpg",
+                "price_range": "2000-5000"
+              },
+              {
+                "name":"Krishna Tara Comforts",
+                "description": "Centrally located and ideal for families, this hotel offers clean rooms, modern amenities, and easy access to local attractions like Padmapuram Gardens and the Tribal Museum​",
+                "image": "/static/images/aa5.jpg",
+                "price_range": "1700-2500"
+              },
+              {
+                "name":"Ushodaya Resort",
+                "description": " A budget-friendly choice known for its simple yet comfortable accommodations, the resort has nice outdoor spaces, perfect for soaking in the surrounding greenery​",
+                "image": "/static/images/aa4.jpg",
+                "price_range": "$1500-3500"
+              },
+              {
+                "name":"Wild Hill Top Resort",
+                "description": " This resort provides an adventure-filled experience with great hilltop views",
+                "image": "/static/images/Wild aa2.avif",
+                "price_range": "$4000-5000"
+              },
+              {
+                "name":"At Home Prakruthi Resorts",
+                "description": "An eco-friendly resort with a focus on sustainability, located amidst lush green hills. It features well-furnished rooms, a spa, and dining options that include traditional cuisine",
+                "image": "/static/images/aa3.jpg",
+                "price_range": "11000-15000"
+              }
+            ],
+            "dining_options": [
+              {
+                "name": "Bamboo Chicken (Bongulo Chicken)",
+                "description": " This unique dish is a highlight for guests, prepared by marinating chicken with traditional spices and then cooking it in bamboo over an open flame.",
+                "image": "/static/images/af4.jpg",
+                "price_range": "$300-500"
+              },
+              {
+                "name": "Andhra Thali",
+                "description": "This thali features a variety of traditional dishes, including rice, sambhar, rasam, different types of curries, and flavorful pickles. ",
+                "image": "/static/images/af5.webp",
+                "price_range": "$250-500"
+              },
+              {
+                "name": "South Indian breakfast",
+                "description": "which typically includes items like idli, dosa, and freshly brewed Araku coffee, perfect for starting your day with a taste of local flavors",
+                "image": "/static/images/af3.jpg",
+                "price_range": "$500-1000"
+              },
+              {
+                "name": "Andhra cuisine",
+                "description": "Guests also enjoy the resort's offering of regional Andhra cuisine, which includes spicy curries, fresh vegetable dishes, and local specialties served in a beautiful natural setting.",
+                "image": "/static/images/af2.jpg",
+                "price_range": "$200-500"
+              },
+              {
+                "name": "Ragi Mudde (Finger Millet Balls)",
+                "description": "At Home Prakruthi Resorts, while specific famous dishes aren't detailed, guests typically enjoy traditional Andhra meals.",
+                "image": "/static/images/af1.jpg",
+                "price_range": "$150-200"
+              }
+            ]
+          },
+          "bangalore": {
+            "places_to_visit": [
+              {
+                "name": "Lalbagh Botanical Garden",
+                "description": "A sprawling green oasis in the city, Lalbagh is known for its diverse plant species, including rare tropical and subtropical plants. The garden also features a famous glasshouse inspired by London’s Crystal Palace, which hosts an annual flower show.",
+                "image": "/static/images/bp1.jpg",
+                "budget": "$30-50"
+              },
+              {
+                "name": "Bangalore Palace",
+                "description": "This majestic palace, built in the Tudor style, resembles England's Windsor Castle. Inside, you'll find lavish interiors, antique furniture, and beautiful paintings. It's a great spot to explore Bangalore's royal heritage.",
+                "image": "/static/images/bp2.jpg",
+                "budget": "$230-460"
+              },
+              {
+                "name": "Cubbon Park",
+                "description": "This lush park in the heart of Bangalore is perfect for a relaxing stroll amidst trees, fountains, and sculptures. The park also houses the State Central Library and the Bangalore Aquarium, making it a great place for family visits.",
+                "image": "/static/images/bp3.jpg",
+                "budget": "$0"
+              },
+              {
+                "name": "Bannerghatta National Park",
+                "description": " Located on the outskirts of Bangalore, this national park offers a chance to see wildlife like lions, tigers, elephants, and leopards. It’s popular for its safari rides and also has a butterfly park, zoo, and rescue center.",
+                "image": "/static/images/bp4.jpg",
+                "budget": "$80-100"
+              },
+              {
+                "name": "ISKCON Temple Bangalore",
+                "description": "One of the largest ISKCON temples in the world, it’s a peaceful place to experience traditional Hindu worship. The temple has beautiful architecture, serene prayer halls, and a panoramic view of the city from the top.",
+                "image": "/static/images/bp5.jpg",
+                "budget": "$0"
+              }
+            ],
+            "accommodations": [
+              {
+                "name":"Taj West End",
+                "description": " A luxurious heritage hotel set in a 20-acre garden, it combines colonial charm with modern comfort. The hotel features elegant rooms, a spa, and multiple dining options.",
+                "image": "/static/images/ba1.jpg",
+                "price_range": "20000-41000"
+              },
+              {
+                "name":"The Leela Palace Bangalore",
+                "description": "This palatial hotel exudes opulence and offers stunning views of the city. It boasts spacious rooms, an expansive spa, and exquisite dining experiences.",
+                "image": "/static/images/ba2.jpg",
+                "price_range": "23000-50000"
+              },
+              {
+                "name":"JW Marriott Hotel Bangalore",
+                "description": " Situated in the heart of the city, this modern hotel features upscale rooms, a rooftop pool, and several restaurants serving international and local cuisines.",
+                "image": "/static/images/ba3.jpg",
+                "price_range": "2000-5000"
+              },
+              {
+                "name":"ITC Gardenia",
+                "description": "Known for its eco-friendly practices, this luxury hotel offers well-appointed rooms, a world-class spa, and a variety of dining options that highlight local flavors.",
+                "image": "/static/images/ba4.jpg",
+                "price_range": "40000-50000"
+              },
+              {
+                "name":"Renaissance Bengaluru Race Course Hotel",
+                "description": " This contemporary hotel features stylish rooms with views of the Bangalore Turf Club. It offers modern amenities, a rooftop infinity pool, and multiple dining options.",
+                "image": "/static/images/ba5.jpg",
+                "price_range": "15000-17000"
+              }
+            ],
+            "dining_options": [
+              {
+                "name": "Bangalore Biryani",
+                "description": "A fragrant and flavorful biryani that captures the essence of the city’s culinary heritage.",
+                "image": "/static/images/bd1.jpg",
+                "price_range": "$850-1500"
+              },
+              {
+                "name": "Karnataka Thali",
+                "description": "A beautifully presented thali featuring a variety of traditional Karnataka dishes for an authentic local experience.",
+                "image": "/static/images/bd2.jpg",
+                "price_range": "$500-1000"
+              },
+              {
+                "name": "Tandoori Salmon",
+                "description": "A deliciously spiced salmon fillet, perfectly grilled and served with chutney, showcasing a fusion of flavors.",
+                "image": "/static/images/bd3.jpg",
+                "price_range": "$950-1200"
+              },
+              {
+                "name": "Royal Mughlai Platter",
+                "description": "An extravagant platter featuring an assortment of rich Mughlai dishes, perfect for experiencing a range of flavors.",
+                "image": "/static/images/bd4.jpg",
+                "price_range": "$1800-2000"
+              },
+              {
+                "name": "Nashik Lamb Chops",
+                "description": " Tender and marinated lamb chops that are grilled to perfection, offering a delightful culinary experience.",
+                "image": "/static/images/bd5.jpg",
+                "price_range": "$2000-3000"
+              }
+            ]
+          },
+          "kerala": {
+            "places_to_visit": [
+              {
+                "name": "*Munnar* - The Land of Tea Gardens",
+                "description": "Munnar's mist-covered hills and emerald-green tea gardens make it a paradise for nature lovers. The region is also home to exotic flora and fauna, including the endangered Nilgiri Tahr, and offers pleasant weather and peaceful surroundings.",
+                "image": "/static/images/cp1.jpg",
+                "budget": "$420"
+              },
+              {
+                "name": " *Alleppey (Alappuzha)* - The Venice of the East",
+                "description": "Known for its serene backwaters, Alleppey is best experienced on a traditional houseboat cruise. The town is also famous for its network of canals, beaches, and paddy fields, making it ideal for relaxation and scenic photography.",
+                "image": "/static/images/cp2.jpg",
+                "budget": "$0"
+              },
+              {
+                "name": "*Kochi (Cochin)* - The Queen of the Arabian Sea",
+                "description": "Kochi blends colonial history with modern charm, offering a unique cultural experience. The port city is known for its mix of Portuguese, Dutch, and British influences, which can be seen in its architecture, markets, and churches.",
+                "image": "/static/images/cp3.jpg",
+                "budget": "$0"
+              },
+              {
+                "name": " *Wayanad* - The Green Paradise",
+                "description": "Known for its untouched beauty and dense forests, Wayanad is ideal for nature enthusiasts and trekkers. It's also a good spot for wildlife sightings, such as elephants, and offers adventures like trekking and cave explorations.",
+                "image": "/static/images/cp4.jpg",
+                "budget": "$30-50"
+              },
+              {
+                "name": "*Kumarakom* - The Backwater Gem",
+                "description": "Located on the largest freshwater lake in Kerala, Kumarakom is a tranquil village known for its bird sanctuary and luxury houseboats. This serene destination is perfect for birdwatching, backwater cruises, and relaxing in the lush, peaceful environment.",
+                "image": "/static/images/cp5.jpg",
+                "budget": "$50"
+              }
+            ],
+            "accommodations": [
+              {
+                "name":"Kumarakom Lake Resort, Kumarakom",
+                "description": "Known for its luxurious ambiance and beautiful lake views, Kumarakom Lake Resort combines traditional Kerala charm with modern amenities. Guests can stay in well-appointed villas, enjoy authentic Kerala cuisine, and relax with Ayurvedic treatments.",
+                "image": "/static/images/ca1.jpg",
+                "price_range": "$31000-63000"
+              },
+              {
+                "name":"The Leela Kovalam, Kovalam",
+                "description": "As Kerala's only clifftop beach resort, The Leela offers breathtaking ocean views and a secluded, luxurious stay. It's ideal for beach lovers, with rooms and suites offering panoramic views of the Arabian Sea.",
+                "image": "/static/images/ca2.jpg",
+                "price_range": "30000-50000"
+              },
+              {
+                "name":"Marari Beach Resort, Mararikulam",
+                "description": "Perfect for those seeking a tranquil, eco-friendly escape, Marari Beach Resort is known for its rustic, village-like ambiance and private beach access. This resort embraces Kerala's natural beauty with traditional thatched-roof villas and organic, farm-to-table dining.",
+                "image": "/static/images/ca3.jpg",
+                "price_range": "8000-10000"
+              },
+              {
+                "name":"Spice Tree Resort, Munnar",
+                "description": "Nestled amidst Munnar's hills and tea plantations, Spice Tree offers a luxurious, serene retreat with scenic views. Guests can enjoy pool villas, nature walks, and experiences like tea and spice plantation tours, ideal for a romantic or peaceful getaway.",
+                "image": "/static/images/ca4.jpg",
+                "price_range": "13000-17000"
+              },
+              {
+                "name":"Brunton Boatyard, Fort Koch",
+                "description": " Set in a restored colonial shipyard, Brunton Boatyard offers a unique blend of history and luxury. Its heritage ambiance, combined with modern amenities and stunning harbor views, makes it a top choice for experiencing Kochi’s rich history and charm.",
+                "image": "/static/images/ca5.jpg",
+                "price_range": "24000-30000"
+              }
+            ],
+            "dining_options": [
+              {
+                "name": "Karimeen Pollichathu(Grilled Pearl Spot Fish)",
+                "description": "r Pearl Spot fish, which is marinated with a rich blend of spices, wrapped in a banana leaf, and then grilled to perfection.",
+                "image": "/static/images/cd1.jpg",
+                "price_range": "$300-450"
+              },
+              {
+                "name": "Malabar Prawns Curry(Prawns in a rich coconut gravy)",
+                "description": "A classic from Kerala's Malabar region, this curry features **fresh prawns* simmered in a creamy coconut milk base infused with spices like turmeric, coriander, and green chili. ",
+                "image": "/static/images/cd2.jpg",
+                "price_range": "$250-450"
+              },
+              {
+                "name": "Meen Moilee(Coconut-based fish curry)",
+                "description": "A delicate fish curry with a mellow, comforting flavor, **Meen Moilee* is a Kerala specialty that showcases the subtlety of coconut-based cooking. Fresh fish is simmered in a thin, aromatic coconut milk sauce with turmeric, green chilies, curry leaves, and a hint of black pepper.",
+                "image": "/static/images/cd3.jpg",
+                "price_range": "$2000-2500"
+              },
+              {
+                "name": "Erachi Ularthiyathu (Kerala-style spicy stir-fried beef)",
+                "description": "Known for its bold, intense flavors, **Erachi Ularthiyathu* is a spicy, stir-fried beef dish cooked in traditional Kerala spices. The beef is marinated with spices like black pepper, chili powder, and coriander, then slow-cooked with curry leaves, coconut oil, and shallots until tender. ",
+                "image": "/static/images/cd4.jpg",
+                "price_range": "$770-1000"
+              },
+              {
+                "name": "Kappa Meen Curry(Tapioca with spicy red fish curry)",
+                "description": "**Kappa Meen Curry* is a quintessential Kerala combination, pairing *kappa* (mashed tapioca) with a spicy, tangy fish curry. The tapioca is mashed to a smooth texture and lightly seasoned, serving as a starchy base to absorb the flavors of the vibrant red fish curry. ",
+                "image": "/static/images/cd5.jpg",
+                "price_range": "$250-500"
+              }
+            ]
+          },
+          "pondicherry": {
+            "places_to_visit": [
+              {
+                "name": "Promenade Beach",
+                "description": ": A peaceful seafront promenade stretching over 1.2 km, popular for morning and evening strolls. It's lined with landmarks like the Gandhi statue and the French War Memorial, offering a serene ambiance.",
+                "image": "/static/images/dp1.jpg",
+                "budget": "$0"
+              },
+              {
+                "name": "Auroville",
+                "description": "Known as the “City of Dawn,” Auroville is a universal township dedicated to peace and unity. The golden Matrimandir at its center is a meditation sanctuary surrounded by lush gardens.",
+                "image": "/static/images/dp2.jpg",
+                "budget": "$0"
+              },
+              {
+                "name": "French Quarter (White Town)",
+                "description": "This area features colonial French architecture with pastel-colored buildings, vibrant cafes, and cobbled streets. A popular spot for photography and leisurely strolls.",
+                "image": "/static/images/dp3.jpg",
+                "budget": "$0"
+              },
+              {
+                "name": "Paradise Beach",
+                "description": "Known for its white sand and clear water, Paradise Beach is accessible by a boat ride through the backwaters, making it a unique experience in itself.",
+                "image": "/static/images/dp4.jpg",
+                "budget": "$Boat ride costs around ₹200-₹300 per person"
+              },
+              {
+                "name": "Basilica of the Sacred Heart of Jesus",
+                "description": "A beautiful Gothic-style church built by French missionaries, known for its stained glass panels and tranquil atmosphere.",
+                "image": "/static/images/dp5.jpeg",
+                "budget": "$0"
+              }
+            ],
+            "accommodations": [
+              {
+                "name":"Palais de Mahe",
+                "description": "A luxurious heritage hotel in White Town, offering colonial-style rooms, a rooftop pool, and traditional French cuisine",
+                "image": "/static/images/da1.jpeg",
+                "price_range": "₹8,000-₹10,000"
+              },
+              {
+                "name":"La Villa",
+                "description": "This boutique hotel in the French Quarter has six spacious suites, each with a unique design blending traditional and modern aesthetics",
+                "image": "/static/images/da2.jpg",
+                "price_range": "₹9,000-₹12,000 "
+              },
+              {
+                "name":"The Promenade",
+                "description": "Overlooking Promenade Beach, this hotel offers beach views, a rooftop bar, and cozy rooms. It's a great spot to enjoy the sea breeze and beautiful sunsets.",
+                "image": "/static/images/da3.jpg",
+                "price_range": "₹6,000-₹8,000 "
+              },
+              {
+                "name":"Le Pondy Beach Resort",
+                "description": "Located near Paradise Beach, this resort offers private cottages, a spa, and access to a private stretch of beach, ideal for a relaxing retreat.",
+                "image": "/static/images/da4.jpg",
+                "price_range": ": ₹5,000-₹7,000"
+              },
+              {
+                "name":"Treebo Trip Red Lotus Heritage",
+                "description": "A budget-friendly heritage hotel in White Town, offering colorful rooms with traditional decor and friendly service.",
+                "image": "/static/images/da5.jpg",
+                "price_range": "₹2,500-₹4,000 "
+              }
+            ],
+            "dining_options": [
+              {
+                "name": "Prawn Vindaloo",
+                "description": ": A spicy and tangy Goan-Portuguese dish made with marinated prawns in a vinegar-based sauce. Available at many seaside restaurants.",
+                "image": "/static/images/dd1.jpg",
+                "price_range": ": ₹300-₹500"
+              },
+              {
+                "name": "Creole Fish Curry",
+                "description": "A blend of French and Tamil flavors, this curry is made with fresh fish, coconut milk, and spices, served with steamed rice.",
+                "image": "/static/images/dd2.jpg",
+                "price_range": "₹200-₹400 "
+              },
+              {
+                "name": "Baguettes and Croissants",
+                "description": ": Enjoy freshly baked French baguettes and buttery croissants in cafes around the French Quarter, showcasing Pondicherry’s French influence.",
+                "image": "/static/images/dd3.jpg",
+                "price_range": "$100 - $200"
+              },
+              {
+                "name": "Masala Dosa",
+                "description": "A South Indian classic, this crispy, thin rice pancake filled with spicy potato is perfect for breakfast. Available at local eateries and cafes.",
+                "image": "/static/images/dd4.jpg",
+                "price_range": "$100 - $200"
+              },
+              {
+                "name": "Stuffed Parathas",
+                "description": "Flatbreads stuffed with vegetables or paneer, served with curd and pickles, making for a filling meal or snack",
+                "image": "/static/images/dd5.jpg",
+                "price_range": "$150 - $200"
+              }
+            ]
+          },
+          "goa": {
+            "places_to_visit": [
+              {
+                "name": "Baga Beach",
+                "description": " One of Goa's most popular beaches, known for its bustling nightlife, water sports, beach shacks, and cafes. It’s a hub for tourists looking to experience Goa’s lively atmosphere.",
+                "image": "/static/images/ep1.jpg",
+                "budget": "$0"
+              },
+              {
+                "name": "Basilica of Bom Jesus",
+                "description": "A UNESCO World Heritage Site and one of India’s oldest churches, famous for its Baroque architecture and the preserved remains of St. Francis Xavier.",
+                "image": "/static/images/ep2.jpg",
+                "budget": "$0"
+              },
+              {
+                "name": "Dudhsagar Falls",
+                "description": "This stunning four-tiered waterfall on the Goa-Karnataka border is surrounded by lush forests. It’s accessible by jeep or a train ride and is a popular spot for trekking.",
+                "image": "/static/images/ep3.jpg",
+                "budget": "Jeep safari costs around ₹500-₹700 per person"
+              },
+              {
+                "name": "Anjuna Flea Market",
+                "description": "A vibrant market held every Wednesday, offering everything from handcrafted jewelry and clothes to souvenirs and local street food.",
+                "image": "/static/images/ep4.jpg",
+                "budget": "$0"
+              },
+              {
+                "name": "Fort Aguada",
+                "description": "A 17th-century Portuguese fort offering panoramic views of the Arabian Sea. It includes a lighthouse and prison, making it an interesting historical site.",
+                "image": "/static/images/ep5.jpg",
+                "budget": "$0"
+              }
+            ],
+            "accommodations": [
+              {
+                "name":"The Leela Goa",
+                "description": "A luxury beachfront resort in South Goa with sprawling gardens, lagoon-style pools, and direct beach access. Known for its spa, golf course, and elegant rooms.",
+                "image": "/static/images/ea1.jpeg",
+                "price_range": "₹10,000-₹15,000 "
+              },
+              {
+                "name":"Taj Exotica Resort & Spa",
+                "description": ": A Mediterranean-inspired resort overlooking the Arabian Sea, featuring spacious villas, a spa, and world-class dining options.",
+                "image": "/static/images/ea2.jpg",
+                "price_range": ": ₹12,000-₹18,000 "
+              },
+              {
+                "name":"W Goa",
+                "description": ": A trendy hotel with a unique blend of Goan and modern design, offering luxury amenities, a stunning pool, and a popular beach club.",
+                "image": "/static/images/ea3.jpg",
+                "price_range": "₹10,000-₹16,000 "
+              },
+              {
+                "name":"Radisson Blu Resort Goa",
+                "description": "A family-friendly resort near Cavelossim Beach, with elegant rooms, a large pool, and several dining options. It’s a great option for mid-range stays.",
+                "image": "/static/images/ea4.jpg",
+                "price_range": ": ₹5,000-₹8,000 "
+              },
+              {
+                "name":"Prainha Resort by the Sea",
+                "description": ": A charming budget resort with a Goan vibe, located near Dona Paula Beach. It offers cozy cottages with sea views and a peaceful ambiance.",
+                "image": "/static/images/ea5.jpg",
+                "price_range": ": ₹3,000-₹5,000 "
+              }
+            ],
+            "dining_options": [
+              {
+                "name": "Goan Fish Curry",
+                "description": "A staple in Goan cuisine, this tangy and spicy curry is made with coconut milk, kokum, and a variety of local spices. It’s typically served with rice.",
+                "image": "/static/images/ed1.jpg",
+                "price_range": "₹200-₹400 "
+              },
+              {
+                "name": "Pork Vindaloo",
+                "description": "A fiery pork dish influenced by Portuguese flavors, made with vinegar, garlic, and spices. Known for its intense flavor and is a must-try for meat lovers.",
+                "image": "/static/images/ed2.jpg",
+                "price_range": "₹250-₹450 "
+              },
+              {
+                "name": "Bebinca",
+                "description": "A traditional Goan dessert made from layers of coconut milk, eggs, and sugar. It’s sweet, moist, and a perfect way to end a meal.",
+                "image": "/static/images/ed3.jpg",
+                "price_range": "₹100-₹200 "
+              },
+              {
+                "name": "Xacuti",
+                "description": "A spicy coconut-based curry with chicken or lamb, made with a mix of roasted spices. It’s typically served with rice or local bread.",
+                "image": "/static/images/ed4.jpg",
+                "price_range": "₹200-₹400"
+              },
+              {
+                "name": "Goan Prawn Balchão",
+                "description": "A spicy, tangy prawn pickle made with vinegar, red chilies, and spices. Usually served with rice or bread as a side dish.",
+                "image": "/static/images/ed5.jpeg",
+                "price_range": "₹300-₹500 "
+              }
+            ]
+          },
+          "vizag": {
+            "places_to_visit": [
+              {
+                "name": "RK Beach (Ramakrishna Beach",
+                "description": "A popular beach known for its scenic beauty, RK Beach is a great place for evening strolls and enjoying the sunset. It features a long stretch of sand, and several eateries and vendors selling local snacks.",
+                "image": "/static/images/fp1.jpg",
+                "budget": "$0"
+              },
+              {
+                "name": "Kailasagiri Hill Park",
+                "description": ": A hilltop park with panoramic views of the city and the sea, Kailasagiri features a giant statue of Lord Shiva and Parvati. Visitors can enjoy a ropeway ride and explore the gardens.",
+                "image": "/static/images/fp2.jpg",
+                "budget": "₹50"
+              },
+              {
+                "name": "Visakha Museum",
+                "description": "This museum showcases the history and culture of Vizag, including artifacts from the maritime history of the region. It’s a great place for history enthusiasts.",
+                "image": "/static/images/fp3.jpg",
+                "budget": "₹20"
+              },
+              {
+                "name": "Submarine Museum (INS Kurusura",
+                "description": ": A unique museum housed in a decommissioned submarine, INS Kurusura offers insights into naval life and maritime warfare. It's an engaging experience for visitors of all ages.",
+                "image": "/static/images/fp4.jpg",
+                "budget": "₹40."
+              },
+              {
+                "name": "Borra Caves",
+                "description": ": Located about 90 km from Vizag, these limestone caves are famous for their stalactites and stalagmites. The caves are a stunning natural wonder, perfect for adventure seekers.",
+                "image": "/static/images/fp5.jpg",
+                "budget": "₹40."
+              }
+            ],
+            "accommodations": [
+              {
+                "name":"Taj Gateway Hotel Beach Road",
+                "description": "A luxury hotel located on the beachfront, offering elegant rooms, a pool, and fine dining options. The hotel provides excellent service and stunning views of the Bay of Bengal",
+                "image": "/static/images/fa1.jpg",
+                "price_range": "₹5,000-₹10,000 "
+              },
+              {
+                "name":"Novotel Visakhapatnam Varun Beach",
+                "description": "This upscale hotel features contemporary rooms with sea views, a spa, and a swimming pool. It’s conveniently located near major tourist attractions.",
+                "image": "/static/images/fa2.jpg",
+                "price_range": "₹4,000-₹9,000 "
+              },
+              {
+                "name":"The Park Visakhapatnam",
+                "description": ": A stylish hotel with a modern vibe, featuring a rooftop infinity pool and beach access. It’s ideal for both business and leisure travelers.",
+                "image": "/static/images/fa3.jpg",
+                "price_range": "₹3,500-₹8,000 "
+              },
+              {
+                "name":"Hotel Green Park",
+                "description": ": This well-rated hotel offers comfortable accommodations with a variety of amenities, including a restaurant, gym, and conference facilities. It’s centrally located for easy access to the city.",
+                "image": "/static/images/fa4.jpg",
+                "price_range": "₹3,000-₹7,000 "
+              },
+              {
+                "name":"Siddhartha Hotel",
+                "description": ": A budget-friendly option with decent facilities, including a restaurant and bar. It’s located near the beach and popular local attractions.",
+                "image": "/static/images/fa5.jpg",
+                "price_range": "₹1,500-₹3,500 "
+              }
+            ],
+            "dining_options": [
+              {
+                "name": "Seafood Thali",
+                "description": "A delightful platter that includes a variety of fresh seafood dishes, such as fish fry, prawn curry, and crab masala, served with rice and local spices. A must-try for seafood lovers.",
+                "image": "/static/images/fd1.jpg",
+                "price_range": "₹300-₹600"
+              },
+              {
+                "name": "Pesarattu",
+                "description": "A healthy green gram dosa, usually served with ginger chutney and upma. It’s a popular breakfast item in Andhra Pradesh.",
+                "image": "/static/images/fd2.jpg",
+                "price_range": "₹50-₹150"
+              },
+              {
+                "name": "Andhra Chicken Curry",
+                "description": "A spicy and flavorful chicken curry cooked with local spices and served with rice or rotis. The robust flavors make it a favorite among locals.",
+                "image": "/static/images/fd3.jpeg",
+                "price_range": "₹200-₹400"
+              },
+              {
+                "name": "Biryani",
+                "description": ": Vizag offers a unique take on biryani, often made with marinated chicken or mutton, fragrant rice, and aromatic spices. It's a hearty and satisfying meal.",
+                "image": "/static/images/fd4.jpg",
+                "price_range": " ₹250-₹500"
+              },
+              {
+                "name": "Pulihora (Tamarind Rice)",
+                "description": "A tangy and spicy rice dish made with tamarind and various spices. It’s often served during festivals and special occasions",
+                "image": "/static/images/fd5.jpg",
+                "price_range": "₹100-₹200"
+              }
+            ]
+          },
+          "mysore": {
+            "places_to_visit": [
+              {
+                "name": "Mysore Palace",
+                "description": "This stunning royal palace, built in the Indo-Saracenic style, is a UNESCO World Heritage Site. The palace is known for its grand architecture, intricate carvings, and beautiful gardens. ",
+                "image": "/static/images/gp1.jpg",
+                "budget": "₹50 "
+              },
+              {
+                "name": "Chamundi Hill",
+                "description": ": A sacred hill that houses the Chamundeshwari Temple, dedicated to Goddess Chamundi. The hill offers panoramic views of the city and is a popular spot for trekking and photography",
+                "image": "/static/images/gp2.jpg",
+                "budget": "$0"
+              },
+              {
+                "name": "St. Philomena's Church",
+                "description": "One of the largest churches in India, St. Philomena's Church is renowned for its neo-gothic architecture. The stained-glass windows and towering spires are magnificent, making it a serene place for reflection.",
+                "image": "/static/images/gp3.jpg",
+                "budget": "$0"
+              },
+              {
+                "name": "Mysore Zoo (Sri Chamarajendra Zoological Gardens",
+                "description": ": One of the oldest and well-maintained zoos in India, Mysore Zoo is home to a diverse range of animals, including rare species. It’s an excellent place for families and wildlife enthusiasts.",
+                "image": "/static/images/gp4.jpg",
+                "budget": "₹50 "
+              },
+              {
+                "name": "Brindavan Gardens",
+                "description": "Located about 30 minutes from Mysore, Brindavan Gardens is famous for its symmetrical design, terraced lawns, and musical fountain.",
+                "image": "/static/images/gp5.jpg",
+                "budget": "₹30"
+              }
+            ],
+            "accommodations": [
+              {
+                "name":"Royal Orchid Brindavan Garden Palace & Spa",
+                "description": "A luxurious hotel located near Brindavan Gardens, offering opulent rooms, a spa, and fine dining. The hotel’s architecture and gardens add to the royal experience.",
+                "image": "/static/images/ga1.jpg",
+                "price_range": "₹5,000-₹10,000 "
+              },
+              {
+                "name":"Radisson Blu Plaza Hotel Mysore",
+                "description": "An upscale hotel in the city center with modern amenities, including a pool, fitness center, and multiple dining options. ",
+                "image": "/static/images/ga2.jpg",
+                "price_range": "₹4,000-₹9,000 "
+              },
+              {
+                "name":"The Quorum",
+                "description": "A boutique hotel known for its contemporary design and personalized service. It features a rooftop pool and a restaurant serving a mix of local and international cuisine",
+                "image": "/static/images/ga3.jpg",
+                "price_range": "₹3,000-₹6,000 "
+              },
+              {
+                "name":"Hotel Dasaprakash",
+                "description": "A well-established budget hotel with clean rooms and basic amenities. It’s conveniently located near major attractions and offers complimentary breakfast.",
+                "image": "/static/images/ga4.jpg",
+                "price_range": "₹1,500-₹3,500 "
+              },
+              {
+                "name":"Laika Boutique Stay",
+                "description": ": A charming boutique hotel with unique decor, offering cozy accommodations and a peaceful atmosphere.",
+                "image": "/static/images/ga5.jpeg",
+                "price_range": "₹2,000-₹4,000 "
+              }
+            ],
+            "dining_options": [
+              {
+                "name": "Mysore Pak",
+                "description": "A traditional sweet made from gram flour, ghee, and sugar, Mysore Pak is rich and delicious, often enjoyed during festivals and special occasions. It’s known for its melt-in-the-mouth texture.",
+                "image": "/static/images/gd1.jpg",
+                "price_range": "₹100-₹300 "
+              },
+              {
+                "name": "Bisi Bele Bath",
+                "description": "A popular rice dish cooked with lentils, vegetables, and a special spice mix. Served with raita (yogurt sauce), this dish is both hearty and flavorful, making it a staple in Mysore.",
+                "image": "/static/images/gd2.jpg",
+                "price_range": "₹100-₹250"
+              },
+              {
+                "name": "Ragi Mudde",
+                "description": "A nutritious dish made from finger millet flour, ragi mudde is typically served with sambar (spiced lentil soup) or a vegetable curry. It's a traditional meal in Karnataka",
+                "image": "/static/images/gd3.jpg",
+                "price_range": "₹50-₹150"
+              },
+              {
+                "name": "Mysore Masala Dosa",
+                "description": "A variant of the classic dosa, this dish is filled with a spicy potato filling and served with chutneys and sambar. It’s a must-try for breakfast or a snack.",
+                "image": "/static/images/gd4.jpg",
+                "price_range": "₹50-₹150"
+              },
+              {
+                "name": "Gulab Jamun",
+                "description": "A beloved dessert made from khoya (milk solids) and soaked in sugar syrup, gulab jamun is often served at weddings and festive occasions. ",
+                "image": "/static/images/gd5.jpg",
+                "price_range": "₹50-₹200 "
+              }
+            ]
+          },
+          "tirupati": {
+            "places_to_visit": [
+              {
+                "name": "Sri Venkateswara Temple (Tirumala Temple)",
+                "description": "this ancient temple is dedicated to Lord Venkateswara, a form of Lord Vishnu. Known as the richest and one of the most visited temples in the world, it attracts millions of devotees annually. The temple complex is famous for its architecture and spiritual significance.",
+                "image": "/static/images/hp1.jpg",
+                "budget": "$0"
+              },
+              {
+                "name": "Sri Kapileswara Swamy Temple",
+                "description": ": Situated at the foothills of Tirumala, this temple is dedicated to Lord Shiva and is known for its unique Dravidian architecture. It is surrounded by lush greenery and includes a holy waterfall known as Kapila Theertham.",
+                "image": "/static/images/hp2.jpg",
+                "budget": "$0"
+              },
+              {
+                "name": "Sri Venkateswara Zoological Park",
+                "description": "This expansive zoo is home to a variety of wildlife, including deer, tigers, and elephants, as well as an impressive butterfly park. It’s a fun spot for families and nature enthusiasts.",
+                "image": "/static/images/hp3.jpg",
+                "budget": "$50"
+              },
+              {
+                "name": "Chandragiri Fort",
+                "description": "A historic fort built in the 11th century, Chandragiri Fort offers panoramic views of the surrounding landscapes. It includes a palace and a small museum, providing insights into the history of the Vijayanagara dynasty",
+                "image": "/static/images/hp4.jpg",
+                "budget": "$50"
+              },
+              {
+                "name": "Sri Padmavathi Ammavari Temple",
+                "description": "Located in Tiruchanur, near Tirupati, this temple is dedicated to Goddess Padmavathi, the consort of Lord Venkateswara. It’s an important pilgrimage site for devotees visiting Tirumala Temple",
+                "image": "/static/images/hp5.jpg",
+                "budget": "$20"
+              }
+            ],
+            "accommodations": [
+              {
+                "name":"Marasa Sarovar Premiere",
+                "description": "A 5-star luxury hotel designed to reflect the serenity of Tirupati, offering comfortable rooms, an outdoor pool, a spa, and multiple dining options. The hotel is well-located, with easy access to the Tirumala hills.",
+                "image": "/static/images/ha1.jpg",
+                "price_range": "₹5,000-₹10,000 "
+              },
+              {
+                "name":"Fortune Select Grand Ridge",
+                "description": "A modern hotel with well-appointed rooms, a fitness center, a swimming pool, and a multi-cuisine restaurant. It’s ideal for those seeking comfort and convenience close to the main attractions.",
+                "image": "/static/images/ha2.jpg",
+                "price_range": "₹4,000-₹8,000 "
+              },
+              {
+                "name":"Pai Viceroy Hotel Tirupati",
+                "description": "A budget-friendly yet comfortable hotel with clean rooms and an in-house restaurant serving local and international dishes. It’s centrally located and offers good value for money.",
+                "image": "/static/images/ha3.jpeg",
+                "price_range": "₹2,000-₹4,000 "
+              },
+              {
+                "name":"Hotel Bliss",
+                "description": "A mid-range hotel with spacious rooms, a swimming pool, and a restaurant. It’s popular for its hospitality and proximity to major temples and other attractions",
+                "image": "/static/images/ha4.jpg",
+                "price_range": "₹2,500-₹5,000 "
+              },
+              {
+                "name":"Hotel Govind Heights",
+                "description": "A budget accommodation option offering clean and comfortable rooms, with easy access to the main temple and other local attractions. It's perfect for pilgrims on a budget.",
+                "image": "/static/images/ha5.jpeg",
+                "price_range": "₹1,000-₹3,000"
+              }
+            ],
+            "dining_options": [
+              {
+                "name": "Tirupati Laddu",
+                "description": "The most famous offering from Tirumala Temple, this sweet made of ghee, flour, and nuts is a must-try for visitors. The laddu is revered as prasadam and has a unique taste and texture.",
+                "image": "/static/images/hd1.jpg",
+                "price_range": "₹50-₹100 "
+              },
+              {
+                "name": "Puliyogare (Tamarind Rice)",
+                "description": "A tangy and spicy rice dish made with tamarind, spices, and peanuts. Puliyogare is a popular local dish, often served as prasadam at temples.",
+                "image": "/static/images/hd2.jpg",
+                "price_range": "₹50-₹150 "
+              },
+              {
+                "name": "Upma",
+                "description": "A simple and comforting dish made from semolina, vegetables, and mild spices. Upma is typically served for breakfast and is enjoyed by both locals and tourists.",
+                "image": "/static/images/hd3.jpg",
+                "price_range": "₹30-₹80"
+              },
+              {
+                "name": "Dosa with Peanut Chutney",
+                "description": "A crispy, thin dosa served with coconut or peanut chutney. This dish is a breakfast staple in Tirupati, and the peanut chutney adds a unique twist to the typical dosa",
+                "image": "/static/images/hd4.jpeg",
+                "price_range": "₹50-₹150"
+              },
+              {
+                "name": "Sambar Rice",
+                "description": "A popular South Indian meal, sambar rice is made with a flavorful lentil and vegetable stew mixed with rice. It’s a wholesome and filling dish, often enjoyed with papad or pickle.",
+                "image": "/static/images/hd5.jpg",
+                "price_range": "₹80-₹150"
+              }
+            ]
+          },
+          "kakinada": {
+            "places_to_visit": [
+              {
+                "name": "Hope Island",
+                "description": "A serene and secluded island, perfect for nature lovers and a great spot for bird-watching. Accessible by boat, it provides beautiful sea views and is ideal for a peaceful escape.",
+                "image": "/static/images/ip1.jpg",
+                "budget": " 200–500"
+              },
+              {
+                "name": "Coringa Wildlife Sanctuary",
+                "description": "Known for its mangrove forests and rich biodiversity, this sanctuary is home to various bird species, including the rare white ibis. It’s also a great spot for eco-tourism.",
+                "image": "/static/images/ip2.jpg",
+                "budget": "$10–20"
+              },
+              {
+                "name": "Kakinada Beach (Uppada Beach)",
+                "description": "A less-crowded beach known for its scenic views and calm waves. It’s great for a peaceful day by the shore or an evening walk along the coast.",
+                "image": "/static/images/ip3.jpg",
+                "budget": "$0"
+              },
+              {
+                "name": "Draksharamam Temple",
+                "description": "A historic temple dedicated to Lord Shiva, Draksharamam is one of the Pancharama Kshetras and boasts stunning architectural details and spiritual significance.",
+                "image": "/static/images/ip4.jpg",
+                "budget": "$0"
+              },
+              {
+                "name": "Annavaram Temple",
+                "description": "Located about 45 km from Kakinada, the Annavaram Temple is dedicated to Lord Veera Venkata Satyanarayana Swamy. It’s a popular pilgrimage spot set atop a hill with panoramic views.",
+                "image": "/static/images/ip5.jpg",
+                "budget": "$0"
+              }
+            ],
+            "accommodations": [
+              {
+                "name":"Paradigm Sarovar Portico",
+                "description": "A luxury hotel in Kakinada known for its modern amenities, spacious rooms, and quality service. It’s suitable for both leisure and business travelers.",
+                "image": "/static/images/ia1.jpg",
+                "price_range": " 4,000–5,500"
+              },
+              {
+                "name":"Royal Park Kakinada",
+                "description": " A well-reviewed 3-star hotel with comfortable rooms and convenient amenities. Its restaurant offers a mix of local and international cuisines.",
+                "image": "/static/images/ia2.jpg",
+                "price_range": "Rs. 3,000–4,500"
+              },
+              {
+                "name":"Dolphin Hote",
+                "description": "A popular choice for mid-range travelers, offering cozy rooms and proximity to major attractions. Good for family stays with reliable hospitality.",
+                "image": "/static/images/ia3.jpg",
+                "price_range": "Rs. 2,500–3,500"
+              },
+              {
+                "name":"Venky Residency",
+                "description": "An affordable accommodation with decent amenities and a friendly atmosphere. Located conveniently for easy access to shopping and dining spots.",
+                "image": "/static/images/ia4.jpg",
+                "price_range": "Rs. 1,500–2,500"
+              },
+              {
+                "name":"Hotel Royal Palace",
+                "description": " Offers budget-friendly rooms with essential amenities and is located near Kakinada’s main areas. A practical choice for travelers on a tight budget.",
+                "image": "/static/images/ia5.jpg",
+                "price_range": "Rs. 1,000–2,000"
+              }
+            ],
+            "dining_options": [
+              {
+                "name": "Kakinada Kaja",
+                "description": "A famous sweet made with layered dough, deep-fried, and coated in sugar syrup. Known for its crunchy texture and sweet flavor, this local dessert is a must-try.",
+                "image": "/static/images/id1.jpg",
+                "price_range": "Rs. 100–200"
+              },
+              {
+                "name": "Royyala Vepudu (Prawn Fry)",
+                "description": "A spicy prawn dish cooked with local spices and herbs. Popular along the coast, this dish is full of flavor and showcases the region's love for seafood.",
+                "image": "/static/images/id2.jpg",
+                "price_range": "Rs. 250–400"
+              },
+              {
+                "name": "Chepala Pulusu (Fish Curry)",
+                "description": " A tangy fish curry made with tamarind, chilies, and traditional spices. This dish is best enjoyed with steamed rice and highlights Andhra’s bold flavors.",
+                "image": "/static/images/id3.jpg",
+                "price_range": "Rs. 200–300"
+              },
+              {
+                "name": "Gongura Pachadi",
+                "description": "A chutney made from gongura leaves (sorrel leaves) that are unique to Andhra cuisine. This tangy and spicy relish pairs well with rice and is loved by locals.",
+                "image": "/static/images/id4.jpg",
+                "price_range": "Rs. 50–100"
+              },
+              {
+                "name": "Andhra Chicken Biryani",
+                "description": "A spicy and aromatic chicken biryani infused with Andhra-style masalas. It’s usually served with raita and mirchi ka salan, offering a flavorful and filling meal.",
+                "image": "/static/images/id5.jpg",
+                "price_range": "Rs. 200–350"
+              }
+            ]
+          },
+          "rajamundry": {
+            "places_to_visit": [
+              {
+                "name": "Godavari River",
+                "description": "The second longest river in India, offering scenic views and boat rides. It’s a serene spot for picnics and sunset watching",
+                "image": "/static/images/jp1.jpeg",
+                "budget": "$0"
+              },
+              {
+                "name": "Rajahmundry Railway Station",
+                "description": " Known for its historical architecture, it’s one of the oldest railway stations in India and a significant junction.",
+                "image": "/static/images/jp2.jpeg",
+                "budget": "$0"
+              },
+              {
+                "name": "ISCKON Temple",
+                "description": "A peaceful temple dedicated to Lord Krishna, known for its beautiful architecture and serene atmosphere.",
+                "image": "/static/images/jp3.jpeg",
+                "budget": "$0"
+              },
+              {
+                "name": "Kambala Park",
+                "description": "A well-maintained park along the Godavari River, ideal for morning walks and family outings with gardens and play areas.",
+                "image": "/static/images/jp4.jpeg",
+                "budget": "$0"
+              },
+              {
+                "name": "Dowleswaram Barrage",
+                "description": "An impressive dam on the Godavari, providing panoramic views and a great spot for photography.",
+                "image": "/static/images/jp5.jpeg",
+                "budget": "$0"
+              }
+            ],
+            "accommodations": [
+              {
+                "name":"Hotel Anand Regency",
+                "description": "A mid-range hotel with comfortable rooms, a restaurant, and proximity to the river.",
+                "image": "/static/images/ja1.jpeg",
+                "price_range": "₹2,000 - ₹3,500"
+              },
+              {
+                "name":"The Royal Dmello",
+                "description": "Offers luxury accommodations with modern amenities and an on-site restaurant.",
+                "image": "/static/images/ja2.jpeg",
+                "price_range": "₹3,500 - ₹6,000"
+              },
+              {
+                "name":"Hotel Vigneshwara",
+                "description": "A budget-friendly option with clean rooms and essential services",
+                "image": "/static/images/ja3.jpeg",
+                "price_range": " ₹1,000 - ₹2,000"
+              },
+              {
+                "name":"Hotel K. S. S. S",
+                "description": "Known for its affordability and decent facilities, making it suitable for budget travelers.",
+                "image": "/static/images/ja4.jpg",
+                "price_range": "₹800 - ₹1,500"
+              },
+              {
+                "name":"Fortune Park Jayadev",
+                "description": "A premium hotel with excellent dining options, business facilities, and well-furnished rooms",
+                "image": "/static/images/ja5.jpeg",
+                "price_range": "₹4,000 - ₹8,000 "
+              }
+            ],
+            "dining_options": [
+              {
+                "name": "Pulasa Fish Curry",
+                "description": "A local delicacy made with seasonal Pulasa fish cooked in a spicy and tangy gravy. It's best enjoyed with rice.",
+                "image": "/static/images/jd1.jpeg",
+                "price_range": "$100 - $200"
+              },
+              {
+                "name": "Gongura Pickle",
+                "description": "A tangy and spicy pickle made from gongura leaves, often served with rice or as a side dish.",
+                "image": "/static/images/jd2.jpeg",
+                "price_range": "₹100 - ₹250"
+              },
+              {
+                "name": "Pesarattu",
+                "description": "A green gram dosa that is crispy and healthy, usually served with ginger chutney.",
+                "image": "/static/images/jd3.jpg",
+                "price_range": "₹50 - ₹150."
+              },
+              {
+                "name": "Mirchi Ka Salan",
+                "description": "A spicy curry made with green chilies and a rich peanut and sesame base, typically served with biryani or rice.",
+                "image": "/static/images/jd4.jpeg",
+                "price_range": "₹150 - ₹300"
+              },
+              {
+                "name": "Kaja",
+                "description": "A sweet made from refined flour, shaped into small rounds and fried, then soaked in sugar syrup; a must-try dessert in Rajahmundry.",
+                "image": "/static/images/jd5.jpeg",
+                "price_range": "₹50 - ₹150"
+              }
+            ]
+          },
+          "bhimavaram": {
+            "places_to_visit": [
+              {
+                "name": "Somarama Temple",
+                "description": "One of the Pancharama Kshetras, this ancient temple is dedicated to Lord Shiva and is a prominent spiritual site in Bhimavaram. It’s known for its unique architecture and peaceful atmosphere.",
+                "image": "/static/images/kp1.jpeg",
+                "budget": "$0"
+              },
+              {
+                "name": "Mavullamma Temple",
+                "description": "A highly revered temple dedicated to Goddess Mavullamma, considered the guardian deity of Bhimavaram. The temple sees a significant influx of devotees, especially during the Mavullamma festival.",
+                "image": "/static/images/kp2.jpeg",
+                "budget": "$0"
+              },
+              {
+                "name": "Bhimavaram Beach (Narasapuram Beach)",
+                "description": " Though a short drive from Bhimavaram, this serene beach is a great spot for a day trip. It's popular among locals for picnics and offers peaceful views of the Bay of Bengal.",
+                "image": "/static/images/kp3.jpeg",
+                "budget": "$0"
+              },
+              {
+                "name": "Kolleru Lake",
+                "description": " Located close to Bhimavaram, Kolleru Lake is one of India's largest freshwater lakes and a famous bird sanctuary. It’s ideal for bird-watching, especially migratory birds during winter.",
+                "image": "/static/images/kp4.jpg",
+                "budget": "$0"
+              },
+              {
+                "name": "Dwaraka Tirumala",
+                "description": " A hilltop temple dedicated to Lord Venkateswara, located about 40 km from Bhimavaram. Known as “Chinna Tirupati” (Little Tirupati), it’s a popular pilgrimage site offering a beautiful view of the surroundings.",
+                "image": "/static/images/kp5.jpeg",
+                "budget": "$0"
+              }
+            ],
+            "accommodations": [
+              {
+                "name":"Sapphire Inn Hotel",
+                "description": "A well-rated mid-range hotel with modern amenities, clean rooms, and quality service. It’s centrally located, making it convenient for tourists.",
+                "image": "/static/images/ka1.jpg",
+                "price_range": "Rs. 2,500-3,500"
+              },
+              {
+                "name":"Hotel Grand Sindoor",
+                "description": "A popular choice among families and business travelers, with spacious rooms, a restaurant, and other amenities. It’s known for its cleanliness and reliable service.",
+                "image": "/static/images/ka2.jpg",
+                "price_range": "Rs. 2,500-3,500"
+              },
+              {
+                "name":"Hotel Apple Tree",
+                "description": "An affordable option offering basic amenities, clean rooms, and friendly staff. Ideal for budget-conscious travelers looking for a decent stay.",
+                "image": "/static/images/ka3.jpg",
+                "price_range": "Rs. 1,000-2,000 "
+              },
+              {
+                "name":"Sridevi Residency",
+                "description": " A budget-friendly hotel offering comfortable rooms with essential facilities. Known for its decent hospitality and proximity to the city center.",
+                "image": "/static/images/ka4.jpg",
+                "price_range": "35"
+              },
+              {
+                "name":"Annapurna Residency",
+                "description": "A budget hotel with clean rooms and friendly service, located near key attractions. It’s a practical option for short stays.",
+                "image": "/static/images/ka5.jpg",
+                "price_range": "Rs. 800-1,500"
+              }
+            ],
+            "dining_options": [
+              {
+                "name": "Bhimavaram Kodi Pulao",
+                "description": " A spicy and flavorful chicken pulao that's a local specialty. Known for its distinct Andhra spices, this dish is a must-try for those who enjoy a hearty rice and meat meal",
+                "image": "/static/images/kd1.jpeg",
+                "price_range": "$150-300"
+              },
+              {
+                "name": "Chepala Pulusu (Fish Curry)",
+                "description": "A tangy fish curry made with local spices and tamarind, served with rice. The flavor-packed dish highlights the region’s love for fresh, spicy seafood.",
+                "image": "/static/images/kd2.jpg",
+                "price_range": "Rs. 200-300"
+              },
+              {
+                "name": "Bommidala Pulusu (Catla Fish Curry",
+                "description": "Made with Catla fish, this dish is a traditional Andhra fish curry with a tangy, spicy gravy. It pairs well with rice and is popular among locals.",
+                "image": "/static/images/kd3.jpg",
+                "price_range": "Rs. 250-350"
+              },
+              {
+                "name": "Gongura Pachadi",
+                "description": "A chutney made from gongura (sorrel) leaves, known for its tangy flavor. This local specialty is typically enjoyed with rice and showcases Andhra’s vibrant flavors.",
+                "image": "/static/images/kd4.jpg",
+                "price_range": " $50-100"
+              },
+              {
+                "name": "Royyala Vepudu (Prawn Fry)",
+                "description": "A spicy, dry preparation of prawns cooked with Andhra spices. It's a popular seafood dish loved for its bold flavors and crisp texture.",
+                "image": "/static/images/kd5.jpg",
+                "price_range": "Rs. 250-400"
+              }
+            ]
+          
+          }
+        }
+      }
+    ]
+  }
+  

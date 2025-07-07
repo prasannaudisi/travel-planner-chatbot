@@ -1,0 +1,90 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/static/images/image4.avif'); /* Path to background image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Main Container */
+.main-container {
+    background-color: rgba(255, 255, 255, 0.3); /* Slightly transparent white background */
+    padding: 30px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow around the box */
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Title Styling */
+h1 {
+    font-size: 2rem;
+    color: #140303;
+    margin-bottom: 20px;
+}
+
+/* Button Container Styling (for Home Page) */
+.button-container {
+    margin-top: 20px;
+}
+
+/* Button Styling */
+.button {
+    display: inline-block;
+    padding: 8px 12px; /* Reduced padding to make the button smaller */
+    margin: 10px;
+    background-color: #39098e99;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem; /* Reduced font size for smaller text */
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #39098e99;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button[type="submit"] {
+    padding: 8px; /* Reduced padding for smaller button */
+    background-color: #39098e99;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem; /* Reduced font size for smaller text */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #39098e99;
+}
