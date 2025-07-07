@@ -4,8 +4,6 @@ services:
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn trip_planner_chatbot:app
-
-    runtime: python
     pythonVersion: 3.10.13
     region: oregon
     plan: free
